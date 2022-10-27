@@ -7,6 +7,15 @@
 	align-content: center;
 	justify-content: center;
 	grid-row-gap: 2rem;
+	@media only screen and (max-width: $bg-medium) {
+		grid-column: 1 / -1;
+		align-items: center;
+		padding: 3rem;
+
+		& > h3 {
+			text-align: center;
+		}
+	}
 
 	&__list {
 		align-items: center;
@@ -14,6 +23,14 @@
 		grid-template-columns: min-content max-content;
 		grid-column-gap: 2rem;
 		grid-row-gap: 4vh;
+		@media only screen and (max-width: $bg-small) {
+			grid-template-columns: min-content max-content;
+		}
+
+		@media only screen and (max-width: $bg-medium) {
+			padding: 4rem;
+			grid-template-columns: repeat(3, min-content max-content);
+		}
 	}
 
 	&__img {
